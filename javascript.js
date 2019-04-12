@@ -12,3 +12,18 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
+//function admin
+function openTable(evt, tableName) {
+  var i, tablecontent, tablelink;
+  tablecontent = document.getElementsByClassName("tablecontent");
+  for (i=0; i<tablecontent.length; i++) {
+    tablecontent[i].style.display = "none";
+  }
+  tablelink = document.getElementsByClassName("tablelink");
+  for (i=0; i<tablelink.length; i++) {
+    tablelink[i].className = tablelink[i].className.replace(" active","");
+  }
+  document.getElementById(tableName).style.display = "block";
+  evt.currentTarget.className += "active";
+}
+

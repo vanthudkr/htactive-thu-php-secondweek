@@ -8,7 +8,10 @@
                     <p class="lead text-center">By using our services, you will get all of the great experience.</p>
                     <div class="row">
                     <?php 
-                        foreach($servicese as $key => $values) :?>
+                        require_once "./admin/config.php";
+                        $sql = "SELECT icon, title, content FROM services";
+                        $result = $link->query($sql);
+                        foreach($result as $key => $values) :?>
                             <div class="col-sm-4">
                                 <div class="box-style-1">
                                     <i class="<?= $values['icon']?>"></i>

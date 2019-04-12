@@ -1,7 +1,7 @@
 <?php
     $servicese = [
         [
-            "icon" => "fas fa-lock",
+            "icon" => "fas fa-laptop",
             "title" => "Web applications",
             "content" => "Design and develop web applications, hosting service, domain, SEO.",
         ],
