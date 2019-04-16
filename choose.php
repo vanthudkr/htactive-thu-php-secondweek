@@ -20,14 +20,14 @@
                             <div class="col-md-9">
                                 <?php
                                 require_once "./admin/config.php";
-                                $sql = "SELECT class, id_link, title, description, image FROM choose";
+                                $sql = "SELECT class, id_link, title, content, image FROM choose";
                                 $result = $link->query($sql);
                                     foreach($result as $key => $values) : ?>
                                         <div id="<?= $values['id_link']?>" class="tabcontent <?= $values['class']?>">
                                             <h1><?= $values['title']?></h1>
                                             <div class="row">
                                                 <div class="col-md-12">
-                                                    <p><?= $values['description']?></p>
+                                                    <p><?= $values['content']?></p>
                                                     <img src="<?= $values['image']?>" alt="">
                                                 </div>
                                             </div>

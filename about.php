@@ -24,9 +24,9 @@
                         <div class="panel-group" id="accordion">
                             <?php
                             require_once "./admin/config.php";
-                            $sql = "SELECT icon, title, description, id_link FROM abouts";
+                            $sql = "SELECT icon, title, content, id_link FROM abouts";
                             $result = $link->query($sql); 
-                                foreach($result as $key => $values) : ?>
+                                foreach($result as $key => $values) : ?>    
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                         <a data-toggle="collapse" data-parent="#accordion" href="#<?=$values['id_link']?>">
@@ -38,7 +38,7 @@
                                         </a>
                                         </div>
                                         <div id="<?= $values['id_link']?>" class="panel-collapse collapse">
-                                        <div class="panel-body"><?= $values['description']?></div>
+                                        <div class="panel-body"><?= $values['content']?></div>
                                         </div>
                                     </div>
                                 <?php endforeach
